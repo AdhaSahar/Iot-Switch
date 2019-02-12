@@ -18,9 +18,9 @@ IFTTT account (IFTTT)(https://ifttt.com)
 
 ### 2) Installing MQTT Broker (mosquitto)
 ```
-    sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
-    sudo apt-get update
-    sudo apt-get install mosquitto
+  sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+  sudo apt-get update
+  sudo apt-get install mosquitto
 ```
 Use crontab to start your mosquitto service at reboot.
 
@@ -28,7 +28,7 @@ Use crontab to start your mosquitto service at reboot.
 
 Webhook allows you to create HTTP endpoints which can be used by IFTTT
 ```
-    sudo apt-get install webhook
+  sudo apt-get install webhook
 ```
 
 After webhook is installed, run the iotswitch1.json by using this command. Make sure to change the directory
@@ -57,5 +57,5 @@ Create an Applet, using Google Assistant or Cortana as trigger, and choose webho
 Inside the "What do you want to say" textfield, I preferred to use "Turn $" to make it simple. $ will become a variable that will be sent at the end of your webhook below. So the valid command will be "Turn on" and "Turn off"
 Inside the URL of the web request, put
 ```
-http://<your-ip>:9005/hooks/iotswitch1?status= {{TextField}}
+  http://<your-ip>:9005/hooks/iotswitch1?status= {{TextField}}
 ```
