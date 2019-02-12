@@ -12,16 +12,16 @@ IFTTT account (IFTTT)(https://ifttt.com)
 ## Installation
 
 ### 1) git clone to your server
-'''
+```
   git clone https://github.com/QrioDev/Iot-Switch.git
-'''
+```
 
 ### 2) Installing MQTT Broker (mosquitto)
-'''
+```
     sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
     sudo apt-get update
     sudo apt-get install mosquitto
-'''
+```
 Use crontab to start your mosquitto service at reboot.
 
 ### 3) Installing Webhook
