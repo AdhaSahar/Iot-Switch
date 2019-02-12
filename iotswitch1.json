@@ -1,0 +1,15 @@
+
+[
+	{
+		"id": "iotswitch1",
+		"execute-command": "/your/own/directory/iotswitch1.sh",
+		"pass-environment-to-command":
+		[
+			{
+				"source": "url",
+				"name": "status",
+				"envname": "status"
+			}
+		]
+	}
+]
