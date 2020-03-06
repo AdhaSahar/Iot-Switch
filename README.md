@@ -16,13 +16,13 @@ IFTTT account (IFTTT)(https://ifttt.com)
   git clone https://github.com/QrioDev/Iot-Switch.git
 ```
 
-### 2) Installing MQTT Broker (mosquitto)
+### 2) Install a MQTT Broker (mosquitto)
 ```
   sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
   sudo apt-get update
   sudo apt-get install mosquitto
 ```
-Use crontab to start your mosquitto service at reboot.
+Use crontab to start your mosquitto service at boot.
 
 ### 3) Installing Webhook
 
@@ -48,13 +48,13 @@ The switch can be controlled via webook by putting a query at the end of the web
   http://<yourip>:9005/hooks/iotswitch1?status=off // " off
 ```
 
-### 4) Uploading the arduino code into your ESP32. Make sure to change the SSID, password and the ip of your broker inside the code.
+### 4) Upload the arduino code into your ESP32. Make sure to change the SSID, password and the ip of your broker inside the code.
 
 ### 5) Integrating with IFTTT
 
-Create an Applet, using Google Assistant or Cortana as trigger, and choose webhook (make web request) as action.
+Create an Applet, using Google Assistant or Cortana as a trigger, and choose webhook (make web request) as an action.
 
-Inside the "What do you want to say" textfield, I preferred to use "Turn $" to make it simple. $ will become a variable that will be sent at the end of your webhook below. So the valid command will be "Turn on" and "Turn off"
+Inside the "What do you want to say" textfield, I prefer to use "Turn $" to make it simple. $ will become a variable that will be sent at the end of your webhook below as a parameter. So the valid command will be "Turn on" and "Turn off"
 Inside the URL of the web request, put
 ```
   http://<your-ip>:9005/hooks/iotswitch1?status= {{TextField}}
